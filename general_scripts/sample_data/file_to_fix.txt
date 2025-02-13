@@ -1,0 +1,5 @@
+
+The sentence below will only make sense one you run "find_and_replace.awk dictionary.txt file_to_fix.txt"
+
+foo is a powerful bar language for baz extraction, file qux, and a variety of other quz!
+

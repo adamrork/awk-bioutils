@@ -1,0 +1,5 @@
+foo	Awk
+bar	programming
+baz	data
+qux	formatting
+quz	tasks
