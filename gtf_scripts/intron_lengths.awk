@@ -44,7 +44,7 @@ $3 == "exon" && $7 ~ "+" {
 
 	# Within a transcript, calculate and assign the length between adjacent exons (i.e., the intron length) to an array. #
 	if ( current_transcript == previous_transcript ) {
-		arr[exon_5prime - stored_exon_3prime]++
+		arr[exon_5prime - stored_exon_3prime - 1]++
 	}
 
 	# Store our current exon 3-prime coordinate for use in the next iteration and update which transcript we are within. #
@@ -64,7 +64,7 @@ $3 == "exon" && $7 ~ "-" {
 
 	# Logic is as above. #
 	if ( current_transcript == previous_transcript ) {
-		arr[stored_exon_3prime - exon_5prime]++
+		arr[stored_exon_3prime - exon_5prime - 1]++
 	}
 
 	# Logic is as above. #
