@@ -37,8 +37,8 @@ BEGIN {
 !/^#/ {
 	# BED file rows correspond to GTF transcript rows. Also, clean up the rows. #
 	if ( $3 == "transcript" ) {
-		gsub( /\"/, "", $0 )
-		gsub( /\;/, "", $0 )
+		gsub( "\"", "", $0 )
+		gsub( ";", "", $0 )
 
 		# Extract data for entries with "+" or "-" strand characters as outlined above. #
 		if ( $7 == "+" || $7 == "-" ) {
